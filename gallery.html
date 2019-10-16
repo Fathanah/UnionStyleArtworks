@@ -1,0 +1,98 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="A website specifically for art enthusiasts">
+  <meta name="keywords" content="A gallery of artworks">
+  <meta name="author" content="Union Style">
+  <title>Union Style Artworks | Welcome</title>
+  <link rel="stylesheet" href="./css/MyStyle.css">
+  <script>
+  function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
+  </script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div id="branding">
+      <h1><span class="highlight">Union </span>Style Artworks</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+          <li class="current"><a href="gallery.html">Gallery</a></li>
+        <li><a href="service.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="newsletter">
+        <div class="container">
+          <h1>Subscribe To Our Newsletter</h1>
+          <form>
+            <table>
+              <tr><td>
+            <input type="email" placeholder="Enter Email..." required>
+          </td></tr>
+          <tr><td>
+            <button type="submit" class="button_1">Subscribe</button>
+          </tr></td>
+          </table>
+          </form>
+        </div>
+      </section>
+
+      <!-- The grid: four columns -->
+<section id="gallery">
+<div class="row">
+ <div class="column">
+   <img src="./image/athur.png" alt="athur" onclick="myFunction(this);"width="100%" height="80%">
+ </div>
+ <div class="column">
+   <img src="./image/dva.png" alt="Dva" onclick="myFunction(this);"width="100%" height="80%">
+ </div>
+ <div class="column">
+   <img src="./image/saber2.png" alt="Saber2" onclick="myFunction(this);"width="100%" height="80%">
+ </div>
+ <div class="column">
+   <img src="./image/saber.png" alt="Saber" onclick="myFunction(this);"width="100%" height="80%">
+ </div>
+ <div class="column">
+   <img src="./image/overwatch.png" alt="overwatch" onclick="myFunction(this);"width="100%" height="80%">
+ </div>
+
+</div>
+</section>
+
+<!-- The expanding image container -->
+<div class="container">
+ <!-- Close the image -->
+ <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+ <!-- Expanded image -->
+ <img id="expandedImg" style="width:100%">
+
+ <!-- Image text -->
+ <div id="imgtext"></div>
+</div>
+      <footer>
+        <p>Union Style Artworks, Copyright &copy; 2019</p>
+        <p>Follow me on: </p>
+        <a href="https://instagram.com"target="blank"><img src="./image/instagram.png" alt="instagram" width="50px"></a>
+        <a href="https://twitter.com"target="blank"><img src="./image/twitter-icon.png" alt="twitter" width="50px"></a>
+      </footer>
+    </body>
+  </html>

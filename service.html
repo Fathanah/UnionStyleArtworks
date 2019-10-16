@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="A website specifically for art enthusiasts">
+  <meta name="keywords" content="A gallery of artworks">
+  <meta name="author" content="Union Style">
+  <title>Union Style Artworks | Welcome</title>
+  <link rel="stylesheet" href="./css/MyStyle.css">
+  <script>
+    function myFunction() {
+      // Get the snackbar DIV
+      var x = document.getElementById("snackbar");
+
+      // Add the "show" class to DIV
+      x.className = "show";
+
+      // After 3 seconds, remove the show class from DIV
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+  </script>
+</head>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Union</span>Style Artworks</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            <li class="current"><a href="service.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">Contacts</h1>
+          <ul id="contact">
+          <p>
+            Our contact is unionArts98@yahoo.com
+            We gladly accept commissions.
+            We appreciate feedbacks and good critiques from you
+          </p>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>Send a feedbacks</h3>
+            <form class="quote">
+  						<div>
+  							<label>Name</label><br>
+  							<input type="text" placeholder="Name" required>
+  						</div>
+  						<div>
+  							<label>Email</label><br>
+  							<input type="email" placeholder="Email Address" required>
+  						</div>
+  						<div>
+  							<label>Message</label><br>
+  							<textarea placeholder="Message"></textarea>
+  						</div>
+              <!-- Use a button to open the snackbar -->
+                <button onclick="myFunction()">Submit</button>
+
+                <!-- The actual snackbar -->
+                <div id="snackbar">Your feedbacks has been sent</div>
+					</form>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <!--<a href="https://www.pixiv.net/en/" target="blank" class="fa fa-pixiv"></a>
+    <a href="https://twitter.com" target="blank" class="fa fa-twitter"></a>
+    <a href="https://www.yahoo.com" target="blank"class="fa fa-yahoo"></a>
+    <a href="https://www.instagram.com/" target="blank" class="fa fa-instagram"></a>
+  -->
+    <footer>
+      <p>Union Syle Artworks, Copyright &copy; 2019</p>
+      <!-- Add font awesome icons -->
+
+    </footer>
+  </body>
+</html>
